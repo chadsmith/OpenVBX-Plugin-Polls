@@ -38,10 +38,10 @@
 	<p>After recording the response, continue to the next applet</p>
 	<div class="vbx-full-pane">
 		<?php echo AppletUI::DropZone('next'); ?>
-	</div><!-- .vbx-full-pane -->
+	</div>
 <?php else: ?>
 	<div class="vbx-full-pane">
 		<h3>You need to create a poll first.</h3>
 	</div>
 <?php endif; ?>
-</div><!-- .vbx-applet -->
+</div>
