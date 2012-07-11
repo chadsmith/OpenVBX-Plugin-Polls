@@ -6,7 +6,7 @@ $direction = 'inbound';
 
 if(!empty($_REQUEST['Direction'])) {
   $direction = $_REQUEST['Direction'];
-	$number = normalize_phone_to_E164('inbound' == $direction ? $_REQUEST['From'] : $_REQUEST['To']);
+	$number = normalize_phone_to_E164(in_array($direction, array('inbound', 'incoming')) ? $_REQUEST['From'] : $_REQUEST['To']);
 	$ci->db->delete('polls_responses', array('poll' => $poll, 'value' => $number));
 	$ci->db->insert('polls_responses', array(
 		'poll' => $poll,
